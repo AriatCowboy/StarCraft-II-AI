@@ -13,7 +13,7 @@ os.environ["SC2PATH"] = 'F:\\Battle.net\\Games\\StarCraftII'
 
 HEADLESS = False
 
-class SentdeBot(sc2.BotAI):
+class SCBOT(sc2.BotAI):
 	def __init__(self):
 		self.ITERATIONS_PER_MINUTE = 165
 		self.MAX_WORKERS = 50
@@ -256,6 +256,6 @@ class SentdeBot(sc2.BotAI):
 				print(y)
 				self.train_data.append([y,self.flipped])
 run_game(maps.get("AbyssalReefLE"), [
-	Bot(Race.Protoss, SentdeBot()),
+	Bot(Race.Protoss, SCBOT()),
 	Computer(Race.Terran, Difficulty.Hard)
 	], realtime=False)
